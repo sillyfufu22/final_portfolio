@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Political Instability Section</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="fx.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alexandria">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+      </head>
+    <body>
+        <div class="main">
+            <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="../index.html">Portfolio</a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ms-auto align-items-end">
+                            <a id="nav_header" class="nav-item nav-link active" href="#context">Context</a>
+                            <a id="nav_header" class="nav-item nav-link active" href="#research">Methodology</a>
+                            <a id="nav_header" class="nav-item nav-link active" href="#design">Results</a>
+                            <a id="nav_header" class="nav-item nav-link active" href="#conclusion">Conclusion</a>
+
+                            <div class="btn-group">
+                                <a id="nav_header" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Other Works
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="vineyard.html">Diamond Hill Vineyards</a></li>
+                                  <li><a class="dropdown-item" href="development.html">Mandalay</a></li>
+                                  <li><a class="dropdown-item" href="personas.html">Washing Machine</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="title_bg d-flex flex-column justify-content-end align-items-start">
+                <h1 id="h1_title" class="text-light display-1">Political Instability and Foreign Exchange Rate Movements</h1>
+                <h3 id="h3_title" class="text-light display-4">A Focus on the 2021 Myanmar Military Coup</h3>
+            </div>
+
+            <div id="context">
+                <h2>Context</h2>
+                <p class="big_p">
+                    This is a term paper that I wrote for ECON 1680: Text Analysis and Machine Learning in Economics. On February 1, 2021, the Myanmar military launched a coup, reversing a decade-long democratic process. Following the coup, massive protests and civil disobedience movements such as resigning government positions erupted nationwide. Within months, the situation escalated to excessive use of force by the military, imposition of Martial Law, and disconnecting the country from the internet and telecommunication services. The international community has responded with condemnations and heavy economic sanctions and most foreign companies have halted their operations in Myanmar. 
+                </p>
+
+                <p class="big_p">
+                    The aim of the paper is to measure the effect of the coup on three foreign exchange rates (U.S. dollar, Singaporean dollar, Thai bhat) by measuring political instability through newspaper articles. 
+                </p>
+
+                <p class="big_p">
+                    Link to paper: <a href="Project 2 Final.pdf">Click Here</a>
+                </p>
+
+                <br/>
+
+                <div class="container d-block">
+                    <div class="row">
+                        <div class="old_website">
+                            <img src="../images/soldier.jpg"></img>
+                            <!-- <h3>The Impact of Political Instability on Myanmar Foreign Exchange Rates Using Text Analysis on Newspaper Articles</h3> -->
+                            <!-- <a href="Project 2 Final.pdf" class="btn work_button">Read Paper</a> -->
+                        </div>
+                        <div class="new_website">
+                            <img src="../images/protest.jpg"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="big_p">
+                    Data for this paper is extracted from the Eikon Datastream, Central Bank of Myanmar, and ProQuest Historical Newspapers Database. Data includes:
+                </p>
+                <ul>
+                    <li>Myanmar COVID-19 Case Reports (Daily)</li>
+                    <li>Dollar-Kyat Exchange Rates (Daily)</li>
+                    <li>Dollar Index (Daily)</li>
+                    <li>Singapore-Dollar Index (Monthly)</li>
+                    <li>Thai-Bhat Index (Monthly)</li>
+                    <li>Government Consumption (Quarterly)</li>
+                    <li>Private Consumption (Quarterly)</li>
+                </ul>
+            </div>
+
+            <div id="research">
+                <h2>Methodology</h2>
+                <h3>Bag-of-Words Model</h3>
+                <p class="big_p">
+                    Using the geopolitical risk index developed by Caldara and Iacoviello (2021) which is conducted on a sample of 25 million English-language news articles from 1900 through the present, this paper applies the bag-of-words model to find the term frequency of words that indicate geopolitical risk in newspaper articles.
+                </p>
+
+                <p class="big_p">
+                    To account for the fact that articles are concentrated around when the coup was launched and follows a decreasing trend afterwards, the political instability term frequency is divided by the number of articles published on that day to create a word score. Furthermore, foreign exchange markets do not operate on the weekends and there is a lag between articles being published and people reading the news. To address these two issues, the paper takes the average of the word scores over three days, mimicking a moving average process with two lags.
+                </p>
+                <img src="../images/equation.png"/>
+                <div class="container d-block">
+                    <div class="row">
+                        <div class="old_website">
+                            <img src="../images/article_num.png"></img>
+                        </div>
+                        <div class="new_website">
+                            <img src="../images/word_freq.png"></img>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="old_website">
+                            <img src="../images/sgd.png"></img>
+                        </div>
+                        <div class="new_website">
+                            <img src="../images/bhat.png"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Ordinary Least Square (OLS) Regression</h3>
+                <p class="big_p">
+                    The regression model for Singapore dollar-kyat and Thai bhat-kyat exchange rate is as follows:
+                </p>
+                <img src="../images/OLS_model.png"/>
+                <p class="big_p">
+                    ΔYi represents the change in daily dollar-kyat exchange rate of day i. Xi represents the term frequency of words that indicate political instability divided by number of articles published on day i and averaged over three days. ΔDi represents the change in daily dollar index, Gi represents the government consumption, and Pi represents the private consumption, and Ci represents new covid cases of day i.
+                </p>
+                <br/>
+            </div>
+
+            <div id="design">
+                <h2>Results</h2>
+                <p class="big_p">
+                    The regression results show that the β for all three exchange rates are positive.
+                </p>
+                <ul>
+                    <li> U.S dollar β: 0.6991</li>
+                    <li> Singaporean dollar β: 0.5018</li>
+                    <li> Thai bhat β: 0.0158</li>
+                </ul>
+                <p class="big_p">
+                    These results are in line with the findings of existing literature. When there is increased civil instability (higher word score), it is expected that the exchange rates will increase (higher change in exchange rate) as investors shy away from local currency.
+                </p>
+            </div>
+
+            <div id="conclusion">
+                <h2>Conclusion</h2>
+                <p class="big_p">
+                    I learned a lot about data collection, data cleaning, and data analysis from this project after weeks of wrangling the data with python. It is nice to see that the graphs along with the results are a robust confirmation of what I witnessed during my time in Myanmar in 2021.
+                </p>
+            </div>
+
+        </div>
+    </body>
+</html>

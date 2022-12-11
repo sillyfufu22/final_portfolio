@@ -21,10 +21,42 @@
   color: black;
 }
 
-#about {
+img {
+  max-width: 100%;
+}
+
+.new_website {
+  max-width: 78%;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4%;
+}
+
+.old_website {
+  max-width: 20%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+.about_container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.about_h1 {
   font-family: "Barlow", serif;
-  font-size: 35px;
-  padding: 10rem;
+  font-size: 3rem;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10rem; */
 }
 
 #work {
